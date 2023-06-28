@@ -1,0 +1,61 @@
+﻿<Window x:Class="Figure.View.MainWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Figure.View"
+        mc:Ignorable="d"
+        Title="MainWindowView"
+        FontSize="17"
+        Height="450"
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="6*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="5*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button x:Name="ShowInfoButton"
+                    Content="Информация о фигуре"
+                    Click="ShowInfoButton_Click"/>
+        </StackPanel>
+
+        <StackPanel x:Name="FigurePanel"
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Column="1" />
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    Margin="0 5"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="3">
+            <Button x:Name="DrawCircle"
+                    Click="DrawCircle_Click"
+                    Content="Нарисовать круг"
+                    Margin="0 0 10 0" />
+            <Button Content="Нарисовать прямоугольник"
+                    x:Name="DrawRectangle"
+                    Click="DrawRectangle_Click"
+                    Margin="0 0 10 0" />
+            <Button Content="Нарисовать квадрат"
+                    Name="DrawSquare"
+                    Click="DrawSquare_Click"
+                    Margin="0 0 10 0" />
+            <Button Content="Нарисовать треугольник"
+                    x:Name="DrawTriangle"
+                    Click="DrawTriangle_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
